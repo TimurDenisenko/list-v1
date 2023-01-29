@@ -34,16 +34,10 @@ print("3 Harjutus")
 print()
 opilased = ["Juhan","Kati","Mario","Mario","Mati","Mati"]
 print(opilased)
-x=i=len(opilased)
-while i>=0:
-    i-=1
-    x=len(opilased)-1
-    while x>=0 and i>=0:
-        if x!=i and opilased[x]==opilased[i]:
-            opilased.pop(x)
-            if len(opilased)==i:
-                i-=1
-        x-=1
+for x in range(0,len(opilased)):
+    for y in range(0,len(opilased)):
+        if x<len(opilased) and y<len(opilased) and y<len(opilased) and x!=y and opilased[x]==opilased[y]:
+            opilased.pop(y)
 print(opilased)
 print()
 
@@ -54,10 +48,7 @@ vanus=[15,17,20,5,35,69,10,3,50,23]
 print("vanuste nimekiri - ", vanus)
 print("Kõige väiksem vanus - ", min(vanus))
 print("Kõige suurem vanus - ", max(vanus))
-keskmine=0
-for i in range(0,len(vanus)):
-    keskmine+=vanus[i]
-print("Keskmine vanus - ", int(round(keskmine/len(vanus),0)), "or", keskmine/len(vanus))
+print("Keskmine vanus - ", int(round(sum(vanus)/len(vanus),0)), "or", sum(vanus)/len(vanus))
 print()
 
 #5
@@ -126,3 +117,4 @@ while True:
     else:
         break
 # 1 len. 2 replace. 3 isdigit. 4 isalpha. 5 islower. 6 isupper. 7 istitle. 8 lower. 9 upper. 10 title.
+
